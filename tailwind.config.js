@@ -1,9 +1,13 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   theme: {
-    extend: {}
+    colors: {
+      gray: colors.trueGray
+    }
   },
   variants: {},
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),require('@tailwindcss/forms')],
   purge: {
     // Filenames to scan for classes
     content: [
