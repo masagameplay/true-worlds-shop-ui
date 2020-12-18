@@ -53,8 +53,8 @@ const App = () => {
                 shopkeeper = shopkeeper ? shopkeeper.replace("shopkeeper:", "").replace(/["']/g, "") : undefined;
                 item = item ? item.replace("item:", "").replace(/["']/g, "") : undefined;
 
-                if(!item) {
-                    if(shop.item.toLowerCase().includes(search.toLowerCase())) {
+                if (!item) {
+                    if (shop.item.toLowerCase().includes(search.toLowerCase())) {
                         item = search.toLowerCase();
                     }
                 }
@@ -147,9 +147,10 @@ const App = () => {
                 </div>
                 <div className="grid grid-cols-4 gap-4">
                     {
-                        defaultShopState.isLoaded && shops.map((shop, i) => <LazyLoad once
-                                                                                      className="col-span-4 lg:col-span-1"
-                                                                                      key={i}>
+                        defaultShopState.isLoaded && shops.map(shop => <LazyLoad
+                            once
+                            className="col-span-4 lg:col-span-1"
+                            key={shop.id}>
                             <Shop shop={shop} setSearch={setSearch}/>
                         </LazyLoad>)
                     }
