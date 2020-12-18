@@ -10,7 +10,6 @@ export const loadShops = () => async (dispatch: any) => {
 
     const shopKeepers = new Map<string, string>();
 
-    const items = ["sand", "arrow", "andesite", "baked_potato", "bone", "birch_leaves", "spruce_trapdoor"];
 
     for(const shop of response.data.shops) {
 
@@ -27,8 +26,6 @@ export const loadShops = () => async (dispatch: any) => {
             uuid: shop.shopkeeper,
             name: username
         }
-
-        shop.item_type = items[Math.floor(Math.random() * items.length)]
 
         shops.push(shop)
     }

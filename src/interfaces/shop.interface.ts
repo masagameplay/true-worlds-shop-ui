@@ -1,4 +1,5 @@
 export interface ShopInterface {
+    id: string;
     world: string;
     x: number;
     y: number;
